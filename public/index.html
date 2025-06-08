@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Booking Cuci Motor Skensa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font poppins dan mada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- link swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@/10.9.2swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/swiper/css/swiper.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body class="bg-custom1 font-poppins">
+    <!-- bagian header -->
+        <header class="w-full z-50 bg-custom1 top-0 fixed">
+            <nav class="w-full py-2 flex xs:justify-between items-center padding bg-custom1">
+                <div>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo" class="w-24 lg:w-28 2xl:w-32">
+                    </a>
+                </div>
+                <div class="hidden md:flex lg:items-center">
+                    <ul class="flex justify-around md:gap-4 items-center">
+                        <li><a href="index.html" class="nav-all2">Beranda</a></li>
+                        <li><a href="#" class="nav-all1">Booking</a></li>
+                        <li><a href="#" class="nav-all1">Kontak</a></li>
+                        <li><a href="#" class="nav-all1">History</a></li>
+                    </ul>
+                </div>
+                <div class="hidden md:flex lg:gap-4 gap-2 items-center">
+                    <a href="#"><button class="button1-nav">Masuk</button></a>
+                    <a href="#"><button class="button2-nav">Daftar</button></a>
+                </div>
+
+                <button class="md:hidden" id="menu-toggle">
+                    <i class="ri-menu-2-fill text-2xl text-custom3"></i>
+                </button>
+            </nav>
+        
+            <nav class="hidden md:hidden w-full py-4 fixed justify-center items-center bg-custom1" id="mobile-menu">
+                <div class="flex flex-col gap-4 items-center">
+                    <ul class="py-2 text-center mx-auto flex flex-col gap-4">
+                        <li><a href="index.html" class="nav-all2">Beranda</a></li>
+                        <li><a href="#" class="nav-all1">Booking</a></li>
+                        <li><a href="#" class="nav-all1">Kontak</a></li>
+                        <li><a href="#" class="nav-all1">History</a></li>
+                    </ul>
+                    <div class="flex gap-2 items-center">
+                        <a href="#"><button class="button1-nav">Masuk</button></a>
+                        <a href="#"><button class="button2-nav">Daftar</button></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <main class="3xl:mt-36 lg:mt-32 md:mt-28 mt-24 bg-custom1 padding">
+            <!-- section 1 -->
+            <section class="flex 2xl:gap-[56px] xl:gap-[52px] lg:gap-[48px] md:gap-8 gap-0">
+                <img src="images/img section 1.png" alt="cuci motor" class="w-[40%] md:block hidden">
+                <div class="my-auto">
+                    <p class="font-semibold text-custom3 2xl:text-[44px] xl:text-[40px] lg:text-[36px] md:text-[32px] text-5xl xs:leading-normal">Kilau <span class="text-custom2">Sempurna</span> untuk Motor Kesayangan <span class="text-custom2">Anda</span></p>
+                    <p class="lg:mt-4 mt-2 font-medium text-custom3 text-opacity-80 3xl:text-xl xl:text-lg lg:text-base text-sm">Kami menawarkan Kilau Sempurna untuk Moto Anda, dikerjakan dengan perhatian penuh untuk hasil yang benar-benar memuaskan</p>
+                    <div class="md:mt-[20px] mt-8 flex items-center lg:gap-4 gap-2">
+                        <button class="button1-nav">Booking</button>
+                        <button class="button2-nav">Selengkapnya</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section 2 -->
+            <section class="margin-top">
+                <div class="flex flex-col gap-2 justify-center text-center md:items-center">
+                    <div class="div-nama-section">
+                        <span class="span-garis-nama-section"></span>
+                        <p class="nama-section">Kenapa Memilih Kami?</p>
+                    </div>
+                    <p class="judul-section"><span class="text-custom2">Keunggulan</span> Dari Jasa <span class="text-custom2">Kami</span></p>
+                </div>
+
+                <div class="2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] md:mt-[20px] mt-4 grid md:grid-cols-12 md:grid-rows-1 grid-cols-1 grid-rows-3 lg:gap-[20px] gap-4">
+                    <!-- card 1 -->
+                    <div class="div-card-section2">
+                        <div class="div-icon-section2">
+                            <iconify-icon icon="bi:phone-fill" class="icon-section2"></iconify-icon>
+                        </div>
+                        <div class="div-text-card-section2">
+                            <p class="judul-card-section2">Sistem Booking Mudah & Cepat</p>
+                            <p class="deskripsi-card-section2">Kami menyediakan layanan booking secara online, agar waktu anda tidak terbuang sia-sia</p>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="div-card-section2">
+                        <div class="div-icon-section2">
+                            <iconify-icon icon="mingcute:time-fill" class="icon-section2"></iconify-icon>
+                        </div>
+                        <div class="div-text-card-section2">
+                            <p class="judul-card-section2">Proses Pencucian Cepat</p>
+                            <p class="deskripsi-card-section2">kami bekerja secara efisien, untuk memastikan motor  Anda tetap bersih dan tidak perlu menunggu lama</p>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="div-card-section2">
+                        <div class="div-icon-section2">
+                            <iconify-icon icon="mdi:water" class="icon-section2"></iconify-icon>
+                        </div>
+                        <div class="div-text-card-section2">
+                            <p class="judul-card-section2">Perlindungan untuk Cat Motor</p>
+                            <p class="deskripsi-card-section2">Kami menggunakan sabun dan kit yang aman untuk cat motor anda agar membuat cat motor anda awet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:mt-[20px] mt-4 grid md:grid-cols-12 md:grid-rows-1 grid-cols-1 grid-rows-2 lg:gap-[20px] gap-4">
+                    <div class="md:col-span-2 md:block hidden"></div>
+
+                    <!-- card 4 -->
+                    <div class="div-card-section2">
+                        <div class="div-icon-section2">
+                            <iconify-icon icon="material-symbols:motorcycle" class="icon-section2"></iconify-icon>
+                        </div>
+                        <div class="div-text-card-section2">
+                            <p class="judul-card-section2">Pembersihan Area Spesifik</p>
+                            <p class="deskripsi-card-section2">Kami tetap mementingkan untuk mencuci di area area sulit terjangkau agar tetap bersih di segala sisi</p>
+                        </div>
+                    </div>
+
+                    <!-- card 5 -->
+                    <div class="div-card-section2">
+                        <div class="div-icon-section2">
+                            <iconify-icon icon="material-symbols:price-change-rounded" class="icon-section2"></iconify-icon>
+                        </div>
+                        <div class="div-text-card-section2">
+                            <p class="judul-card-section2">Harga Kompetitif</p>
+                            <p class="deskripsi-card-section2">Jasa kami memiliki harga yang kompetitif untuk kaum pelajar, jadi anda dapat menghemat uang anda</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 md:block hidden"></div>
+                </div>
+            </section>
+
+            <!-- section 3 -->
+            <section class="margin-top flex 2xl:gap-[54px] xl:gap-[50px] lg:gap-[46px] md:gap-6 gap-0 justify-between">
+                <div class="my-auto">
+                    <div class="div-nama-section">
+                        <span class="span-garis-nama-section"></span>
+                        <p class="nama-section">Tentang Kami</p>
+                    </div>
+                    <p class="judul-section mt-2">Kami <span class="text-custom2">adalah</span> Solusi <br>Kebersihan <span class="text-custom2">Motor Anda</span></p>
+                    <p class="deskripsi-section3-dan-seterusnya">Kami adalah Solusi Kebersihan Motor Anda yang terpercaya, menawarkan layanan pencucian profesional dan detail yang membuat motor Anda kembali bersih maksimal, berkilau, dan terawat sempurna</p>
+                    <div class="lg:mt-[20px] mt-4 flex md:flex-row flex-col items-start xl:gap-[24px] lg:gap-[20px] gap-4">
+                        <!-- service 1 -->
+                        <div class="div-service-section3">
+                            <div class="div-icon-section3">
+                                <iconify-icon icon="ic:round-menu-book" class="icon-section3"></iconify-icon>
+                            </div>
+                            <div class="div-text-service">
+                                <p class="angka-jumlah-service">20+</p>
+                                <p class="text-service">Menu Tersedia</p>
+                            </div>
+                        </div>
+
+                        <!-- service 2 -->
+                        <div class="div-service-section3">
+                            <div class="div-icon-section3">
+                                <iconify-icon icon="ic:round-star" class="icon-section3"></iconify-icon>
+                            </div>
+                            <div class="div-text-service">
+                                <p class="angka-jumlah-service">5.0</p>
+                                <p class="text-service">Rating Customer</p>
+                            </div>
+                        </div>
+
+                        <!-- service 3 -->
+                        <div class="div-service-section3">
+                            <div class="div-icon-section3">
+                                <iconify-icon icon="bi:headset" class="icon-section3"></iconify-icon>
+                            </div>
+                            <div class="div-text-service">
+                                <p class="angka-jumlah-service">24/7</p>
+                                <p class="text-service">Servis Online</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:mt-[24px] md:mt-[20px] mt-8 flex lg:gap-[20px] gap-4">
+                        <button class="button1-nav">Read More</button>
+                        <button class="button2-nav">Booking</button>
+                    </div>
+                </div>
+                <img src="images/img section 3.png" alt="img section 3" class="lg:w-[40%] md:w-[44%] md:block hidden">
+            </section>
+
+            <!-- section 4 -->
+            <section class="margin-top">
+
+            </section>
+
+            <!-- section 5 -->
+            <section class="margin-top flex 2xl:gap-[72px] xl:gap-[68px] lg:gap-[64px] md:gap-8 gap-0">
+                <img src="images/img section 5.png" alt="img cta" class="w-[40%] md:block hidden">
+                <div class="my-auto">
+                    <div class="div-nama-section">
+                        <span class="span-garis-nama-section"></span>
+                        <p class="nama-section">Booking</p>
+                    </div>
+                    <p class="judul-section mt-2 md:block hidden"><span class="text-custom2">Atur Jadwal</span> Cuci Motor Anda <br>dengan <span class="text-custom2">Nyaman</span></p>
+                    <p class="judul-section mt-2 md:hidden"><span class="text-custom2">Atur Jadwal</span> Cuci Motor Anda dengan <span class="text-custom2">Nyaman</span></p>
+                    <p class="deskripsi-section3-dan-seterusnya">Anda bisa memilih waktu dan layanan yang paling sesuai dengan jadwal padat Anda. Cukup beberapa klik, dan motor kesayangan Anda akan kembali bersih berkilau tanpa repot.</p>
+                    <button class="md:mt-4 mt-8 button1-nav">Booking</button>
+                </div>
+            </section>
+
+            <!-- section 6 -->
+            <section class="margin-top">
+                <div class="flex flex-col gap-2 md:justify-center md:text-center md:items-center">
+                    <div class="div-nama-section">
+                        <span class="span-garis-nama-section"></span>
+                        <p class="nama-section">Faq</p>
+                    </div>
+                    <p class="judul-section"><span class="text-custom2">Pertanyaan</span> Yang Sering <span class="text-custom2">Diajukan</span></p>
+                </div>
+
+                <div class="2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] md:mt-[20px] mt-4 grid md:grid-cols-2 md:grid-rows-3 grid-cols-1 grid-rows-6 2xl:gap-x-[51px] xl:gap-x-[47px] lg:gap-x-[43px] md:gap-x-8 lg:gap-y-[20px] gap-y-4">
+                        <!-- pertanyaan 1 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">Apakah motor akan diparkirkan di tempat yang sama?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Tidak, kami akan menginfokan lokasi motor anda saat sudah selesai dicuci</p>
+                            </div>
+                        </div>
+
+                        <!-- pertanyaan 2 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">Hari apa saja buka?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Kami buka dari hari senin sampai jumat, sabtu dan minggu kami libur, menyesuaikan jadwal sekolah</p>
+                            </div>
+                        </div>
+
+                        <!-- pertanyaan 3 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">Apakah ada garansi jika ada kerusakan atau kurang bersih?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Kami pastikan hal itu tidak akan terjadi, dan setiap proses nya akan kami vidiokan demi kepercayaan pelanggan</p>
+                            </div>
+                        </div>
+
+                        <!-- pertanyaan 4 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">Bagaimana Jika Ada Barang Tertinggal di Motor Setelah Dicuci?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Kami akan mengembalikan barang yang tertinggal ke tempatnya semula</p>
+                            </div>
+                        </div>
+
+                        <!-- pertanyaan 5 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">Bisakah melayani beberapa motor sekaligus?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Kami bisa melayani sebanyak lima motor sekaligus, dan dipastikan anda tidak akan menunggu lama</p>
+                            </div>
+                        </div>
+
+                        <!-- pertanyaan 6 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">How should I prepare for my spa appointment?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Spa treatments are generally safe, but some may not be suitable for children or pregnant women. We recommend consulting with our therapists to find the best treatments tailored to your needs.</p>
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+
+            <!-- section 7 -->
+            <section class="margin-top">
+                <div class="grid grid-cols-12 grid-rows-1 2xl:gap-[42px] xl:gap-[38px] lg:gap-[34px] md:gap-8 gap-4">
+                    <div class="flex flex-col gap-2 col-span-4">
+                        <p class="judul-section"><span class="text-custom2">Rating</span> Kami Dari <span class="text-custom2">Customer</span></p>
+                        <p class="2xl:text-xl xl:text-lg lg:text-base text-sm text-custom3 text-opacity-70">Banyak cutomer yang memberikan respon positif mengenai kami</p>
+                    </div>
+                    <div class="swiper customer-slider col-span-8">
+                        <div class="swiper-wrapper mb-8">
+                            <!-- review 1 -->
+                            <div class="div-customer swiper-slide">
+                                <p class="review-customer">Starting with simple waste sorting at home really made me realize the huge impact of small, mindful everyday actions</p>
+                                <div class="flex items-center gap-2 mt-4">
+                                    <img src="images/customer 1.png" alt="customer 1" class="img-customer">
+                                    <div class="flex flex-col gap-1">
+                                        <p class="nama-customer">Septian Pripto</p>
+                                        <p class="status-customer">Community Member</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- review 2 -->
+                            <div class="div-customer swiper-slide">
+                                <p class="review-customer">This inspiring movement brought neighbors together, fostering community spirit to reduce waste and keep our area clean.</p>
+                                <div class="flex items-center gap-2 mt-4">
+                                    <img src="images/customer 2.png" alt="customer 1" class="img-customer">
+                                    <div class="flex flex-col gap-1">
+                                        <p class="nama-customer">Nina Manata</p>
+                                        <p class="status-customer">Community Member</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- review 3 -->
+                            <div class="div-customer swiper-slide">
+                                <p class="review-customer">Recycling completely changed how I see waste, showing there's so much more we can still repurpose wisely and creatively.</p>
+                                <div class="flex items-center gap-2 mt-4">
+                                    <img src="images/customer 3.png" alt="customer 1" class="img-customer">
+                                    <div class="flex flex-col gap-1">
+                                        <p class="nama-customer">Drinda Binasa</p>
+                                        <p class="status-customer">Community Member</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- review 4 -->
+                            <div class="div-customer swiper-slide">
+                                <p class="review-customer">Starting with simple waste sorting at home really made me realize the huge impact of small, mindful everyday actions</p>
+                                <div class="flex items-center gap-2 mt-4">
+                                    <img src="images/customer 1.png" alt="customer 1" class="img-customer">
+                                    <div class="flex flex-col gap-1">
+                                        <p class="nama-customer">Septian Pripto</p>
+                                        <p class="status-customer">Community Member</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- review 5 -->
+                            <div class="div-customer swiper-slide">
+                                <p class="review-customer">Starting with simple waste sorting at home really made me realize the huge impact of small, mindful everyday actions</p>
+                                <div class="flex items-center gap-2 mt-4">
+                                    <img src="images/customer 1.png" alt="customer 1" class="img-customer">
+                                    <div class="flex flex-col gap-1">
+                                        <p class="nama-customer">Septian Pripto</p>
+                                        <p class="status-customer">Community Member</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="parent">
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <!-- script iconify -->
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+        <!-- script navbar -->
+        <script src="navbar.js"></script>
+
+        <!-- link remix icon -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!-- faq js -->
+        <script src="faq.js"></script>
+
+        <!-- script animasi slider card -->
+        <script src="customer.js" type="module"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10.9.2/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
