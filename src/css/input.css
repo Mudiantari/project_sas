@@ -100,6 +100,52 @@
     @apply font-mada text-custom3 text-sm;
 }
 
+/* section 4 */
+.div-card-paket{
+    @apply col-span-1 bg-custom1 border border-custom5 border-opacity-30 rounded-[6px] w-full 2xl:h-[331px] xl:h-[310px] lg:h-[300px] md:h-[305px] h-[280px] relative;
+}
+
+.div-rounded-container{
+    @apply bg-custom2 bg-opacity-[6%] border border-custom5 border-opacity-30 rounded-tr-[65%] w-full 2xl:h-[331px] xl:h-[310px] lg:h-[300px] md:h-[305px] h-[280px] relative;
+}
+
+.div-text{
+    @apply absolute pt-8 px-2 pb-4 top-0 w-full;
+}
+
+.div-nama-paket{
+    @apply flex justify-between items-center;
+}
+
+.nama-paket{
+    @apply font-bold text-custom3 xl:text-xl lg:text-lg text-base;
+}
+
+.nomor-urut-paket{
+    @apply text-outline font-bold xl:text-[36px] lg:text-[32px] md:text-[28px] text-2xl;
+}
+
+.text-benefit-paket{
+    @apply font-semibold text-custom3 lg:text-base text-sm;
+}
+
+.text-titik-point-paket{
+    @apply font-medium text-custom3 text-opacity-40 2xl:lg:text-5xl xl:text-4xl lg:text-xl md:text-lg text-base;
+}
+
+.text-point-paket{
+    @apply font-medium text-custom3 text-opacity-40 lg:text-sm text-[13px];
+}
+
+.text-harga-paket{
+    @apply lg:mt-[18px] mt-4 font-semibold text-custom3 xl:text-2xl lg:text-xl md:text-lg text-base;
+}
+
+.button-booking-paket{
+    @apply 2xl:mt-[40px] xl:mt-[35px] lg:mt-[30px] md:mt-[25px] mt-[20px] w-full py-1 flex justify-center text-center border border-custom2 rounded-[4px] font-medium lg:text-base text-sm text-custom2 hover:text-custom1 hover:bg-custom2 hover:transition-all hover:duration-500;
+}
+
+
 /* section 6 mode xs dan seterusnya */
 /* style untuk animasi faq */
 .answer {
@@ -162,6 +208,39 @@
     @apply text-custom2 text-[10px];
 }
 
+/* footer */
+.div-navigation-footer{
+    @apply flex flex-col gap-2;
+}
+
+.judul-navigation{
+    @apply font-semibold text-custom3 lg:text-base text-sm;
+}
+
+.text-navigation{
+    @apply text-custom3 lg:text-[15px] text-[13px] hover:text-opacity-70 hover:transition-all hover:duration-500;
+}
+
+.icon-navigation{
+    @apply text-custom3 text-[20px] group-hover:text-opacity-70 group-hover:transition-all group-hover:duration-500;
+}
+
+.text-navigation-icon{
+    @apply text-custom3 lg:text-[15px] text-[13px] group-hover:text-opacity-70 group-hover:transition-all group-hover:duration-500;
+}
+
+.icon-social-media{
+    @apply text-custom3 lg:text-[30px] text-[20px] hover:text-opacity-70 hover:transition-all hover:duration-500;
+}
+
+.style-untuk-footer{
+    @apply margin-top pb-4 pt-8 padding bottom-0;
+}
+
+.div-paling-luar-navigation-footer{
+    @apply flex md:flex-row flex-col justify-between 2xl:gap-[94px] xl:gap-[84px] lg:gap-[74px] md:gap-[44px] gap-8;
+}
+
 /* styling untuk scrollbar */
 .parent .swiper-scrollbar{
     @apply md:max-w-[50%] max-w-full;
@@ -173,4 +252,35 @@
 
 .parent .swiper-scrollbar-drag-custom{
     @apply bg-custom2 h-1 cursor-grab overflow-visible;
+}
+
+
+/* css untuk outline text */
+.text-outline {
+  color: #fcfcfc; /* Membuat warna isi teks transparan */
+  -webkit-text-stroke-width: 1.5px; /* Lebar garis tepi */
+  -webkit-text-stroke-color: #06486E; /* Warna garis tepi (biru-800) */
+}
+
+
+/* halaman form */
+/* pop up */
+.popup-content{
+    @apply bg-custom1 rounded-[5px] lg:px-12 lg:py-8 md:px-10 md:py-6 px-8 py-4 flex flex-col justify-center items-center text-center;
+}
+
+.text-label-form{
+    @apply text-custom3 lg:text-sm text-[13px];
+}
+
+.style-text-field-form{
+    @apply w-full bg-custom6 rounded-[5px] px-4 py-[14px] placeholder-custom3 placeholder-opacity-50 lg:text-sm text-[13px] focus:border-transparent focus:text-custom3 focus:outline-none;
+}
+
+.style-select-form{
+    @apply w-full bg-custom6 rounded-[5px] px-4 py-[14px] text-custom3 text-opacity-50 lg:text-sm text-[13px] block appearance-none focus:border-transparent focus:text-custom3 focus:outline-none;
+}
+
+.icon-arrow-untuk-select{
+    @apply pointer-events-none absolute inset-y-0 right-0 flex items-center px-8 text-custom3 text-opacity-50;
 }

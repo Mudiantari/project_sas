@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
         scrollbar: {
             el: '.swiper-scrollbar',
-            draggable: true,
+            dragable: true,
             dragClass: 'swiper-scrollbar-drag-custom', // Kelas custom untuk drag handle
             dragSize: 50,
           },
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             // ukuran layar >=1024
             1024: {
-                allowSlidePrev: 3,
+                slidesPerView: 3,
                 spaceBetween: 20,
             }
         }

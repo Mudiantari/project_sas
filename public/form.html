@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font poppins dan mada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-custom1 flex flex-col min-h-screen">
+    <!-- bagian header -->
+        <header class="w-full z-30 bg-custom1 top-0 fixed">
+            <nav class="w-full py-2 flex xs:justify-between items-center padding bg-custom1">
+                <div>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo" class="w-24 lg:w-28 2xl:w-32">
+                    </a>
+                </div>
+                <div class="hidden md:flex lg:items-center">
+                    <ul class="flex justify-around md:gap-4 items-center">
+                        <li><a href="index.html" class="nav-all1">Beranda</a></li>
+                        <li><a href="form.html" class="nav-all2">Booking</a></li>
+                        <li><a href="#kontak" class="nav-all1">Kontak</a></li>
+                        <li><a href="history.html" class="nav-all1">History</a></li>
+                    </ul>
+                </div>
+                <div class="hidden md:flex lg:gap-4 gap-2 items-center">
+                    <a href="#"><button class="button1-nav">Masuk</button></a>
+                    <a href="#"><button class="button2-nav">Daftar</button></a>
+                </div>
+
+                <button class="md:hidden" id="menu-toggle">
+                    <i class="ri-menu-2-fill text-2xl text-custom3"></i>
+                </button>
+            </nav>
+        
+            <nav class="hidden md:hidden w-full py-4 fixed justify-center items-center bg-custom1" id="mobile-menu">
+                <div class="flex flex-col gap-4 items-center">
+                    <ul class="py-2 text-center mx-auto flex flex-col gap-4">
+                        <li><a href="index.html" class="nav-all2">Beranda</a></li>
+                        <li><a href="form.html" class="nav-all1">Booking</a></li>
+                        <li><a href="#kontak" class="nav-all1">Kontak</a></li>
+                        <li><a href="history.html" class="nav-all1">History</a></li>
+                    </ul>
+                    <div class="flex gap-2 items-center">
+                        <a href="#"><button class="button1-nav">Masuk</button></a>
+                        <a href="#"><button class="button2-nav">Daftar</button></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    
+    <main class="3xl:mt-40 lg:mt-36 md:mt-32 mt-28 padding flex-grow">
+        <p class="font-semibold text-custom3 xl:text-[32px] lg:text-[30px] md:text-[28px] text-[26px]">Form Booking</p>
+        <form action="" id="bookingForm">
+            <div class="2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] mt-[20px] flex flex-col xl:gap-[25px] gap-[20px]">
+                <!-- input 1 -->
+                <div class="flex flex-col gap-2">
+                    <label for="nama" class="text-label-form">Nama Anda</label>
+                    <input type="text" name="nama" id="nama" placeholder="Masukkan nama anda" class="style-text-field-form">
+                </div>
+
+                <!-- input 2 -->
+                <div class="flex md:flex-row flex-col lg:gap-[27px] md:gap-[20px] gap-4 w-full">
+                    <div class="flex flex-col gap-2 w-full">
+                        <label for="nama" class="text-label-form">Service</label>
+                        <div class="relative">
+                            <select id="service" name="service" class="style-select-form">
+                                <option value="service1">Pilih service anda</option>
+                                <option value="service2">Paket A</option>
+                                <option value="service3">Paket B</option>
+                                <option value="service4">Paket C</option>
+                                <option value="service4">Paket D</option>
+                            </select>
+                            <div class="icon-arrow-untuk-select">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 6.757 7.586 5.343 9l3.95 3.95z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2 w-full">
+                        <label for="nama" class="text-label-form">Nomor Ponsel</label>
+                        <input type="number" name="nama" id="nama" placeholder="Masukkan nomor ponsel anda" class="style-text-field-form">
+                    </div>
+                </div>
+
+                <!-- input 3 -->
+                <div class="flex md:flex-row flex-col lg:gap-[27px] md:gap-[20px] gap-4 w-full">
+                    <div class="flex flex-col gap-2 w-full">
+                        <label for="nama" class="text-label-form">Lokasi Kelas/Lab</label>
+                        <input type="text" name="nama" id="nama" placeholder="Masukkan lokasi kelas/lab anda" class="style-text-field-form">
+                    </div>
+
+                    <div class="flex flex-col gap-2 w-full">
+                        <label for="nama" class="text-label-form">Waktu</label>
+                        <div class="relative">
+                            <select id="service" name="service" class="style-select-form">
+                                <option value="service1">Pilih waktu pencucian</option>
+                                <option value="service2">09:00-10:00</option>
+                                <option value="service3">11:00-12:00</option>
+                                <option value="service4">13:00-14:00</option>
+                            </select>
+                            <div class="icon-arrow-untuk-select">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 6.757 7.586 5.343 9l3.95 3.95z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-8 flex lg:gap-8 gap-4">
+                <button class="button2-nav">Cancel</button>
+                <button class="button1-nav" type="submit">Booking</button>
+            </div>
+        </form>
+    </main>
+
+    <div id="overlay" class="fixed top-0 left-0 w-[100%] h-[100%] bg-custom8 bg-opacity-[20%] z-40 hidden"></div>
+
+    <div id="successPopup" class="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-custom1 z-50 text-center hidden lg:max-w-[40%] max-w-[50%] rounded-[5px]">
+        <div class="popup-content">
+            <iconify-icon icon="icon-park-outline:check-one" class="text-custom7 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl text-3xl"></iconify-icon>
+            <p class="mt-4 font-medium text-custom3 2xl:text-2xl xl:text-xl lg:text-lg md:text-base text-sm">Booking berhasil dilakukan</p>
+            <a href="history.html"><button id="doneButton" class="w-full 2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] mt-[20px] bg-custom2 border border-custom2 text-custom1 rounded-[5px] py-1 2xl:px-32 xl:px-28 lg:px-24 md:px-20 px-16 hover:text-custom2 hover:bg-custom1 hover:transition-all hover:duration-500">Done</button></a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="style-untuk-footer" id="kontak">
+        <div class="div-paling-luar-navigation-footer">
+            <div class="flex flex-col gap-1">
+                <img src="images/logo footer.png" alt="logo" class="w-[40%]">
+                <p class="text-custom3 lg:text-sm text-[13px]">Layanan booking cuci motor online cepat, <br>praktis, dan terpercaya. Pilih jadwal anda, <br>dan motor Anda siap bersih tanpa antre.</p>
+            </div>
+                
+            <div class="div-navigation-footer">
+                <p class="judul-navigation">Menu</p>
+                <a href="#"><p class="text-navigation">Beranda</p></a>
+                <a href="#"><p class="text-navigation">Tentang Kami</p></a>
+                <a href="#"><p class="text-navigation">Cara Kerja</p></a>
+                <a href="#"><p class="text-navigation">FAQ</p></a>
+            </div>
+
+            <div class="div-navigation-footer">
+                <p class="judul-navigation">Layanan Kami</p>
+                <a href="#"><p class="text-navigation">Paket A</p></a>
+                <a href="#"><p class="text-navigation">Paket B</p></a>
+                <a href="#"><p class="text-navigation">Paket C</p></a>
+                <a href="#"><p class="text-navigation">Paket D</p></a>
+            </div>
+
+            <div class="div-navigation-footer">
+                <p class="judul-navigation">Kontak</p>
+                <a href="#" class="flex items-center gap-[10px] group">
+                    <iconify-icon icon="ic:baseline-phone" class="icon-navigation"></iconify-icon>
+                    <p class="text-navigation-icon">083-496-284-593</p>
+                </a>
+                <a href="#" class="flex items-center gap-[10px] group">
+                    <iconify-icon icon="lets-icons:message-fill" class="icon-navigation"></iconify-icon>
+                    <p class="text-navigation-icon">citorsa@gmail.com</p>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 mb-4 border-t border-custom3"></div>
+        <div class="justify-between flex md:flex-row flex-col gap-4 md:items-center">
+            <div class="flex lg:gap-[20px] gap-2 items-center">
+                <a href="#"><iconify-icon icon="mdi:instagram" class="icon-social-media"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="mdi:whatsapp" class="icon-social-media"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="mdi:facebook" class="icon-social-media"></iconify-icon></a>
+                <a href="#"><iconify-icon icon="mdi:twitter" class="icon-social-media"></iconify-icon></a>
+            </div>
+            <div class="flex items-center gap-1">
+                <iconify-icon icon="mdi:copyright" class="text-custom3 text-xl"></iconify-icon>
+                <p class="text-custom3 lg:text-sm text-xs">copyright2024citorsa</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- script iconify -->
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+        <!-- script navbar -->
+        <script src="navbar.js"></script>
+
+        <!-- link remix icon -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!-- js untuk pop up -->
+        <script src="popUp_booking.js"></script>
+</body>
+</html>

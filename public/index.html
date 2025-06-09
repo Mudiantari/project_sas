@@ -15,8 +15,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@/10.9.2swiper-bundle.min.css"/>
     <link href="https://unpkg.com/swiper/css/swiper.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- script animasi slider card -->
+        <script src="customer.js" type="module"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10.9.2/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-<body class="bg-custom1 font-poppins">
+<body class="bg-custom1 font-poppins flex flex-col min-h-screen">
     <!-- bagian header -->
         <header class="w-full z-50 bg-custom1 top-0 fixed">
             <nav class="w-full py-2 flex xs:justify-between items-center padding bg-custom1">
@@ -28,9 +33,9 @@
                 <div class="hidden md:flex lg:items-center">
                     <ul class="flex justify-around md:gap-4 items-center">
                         <li><a href="index.html" class="nav-all2">Beranda</a></li>
-                        <li><a href="#" class="nav-all1">Booking</a></li>
-                        <li><a href="#" class="nav-all1">Kontak</a></li>
-                        <li><a href="#" class="nav-all1">History</a></li>
+                        <li><a href="form.html" class="nav-all1">Booking</a></li>
+                        <li><a href="#kontak" class="nav-all1">Kontak</a></li>
+                        <li><a href="history.html" class="nav-all1">History</a></li>
                     </ul>
                 </div>
                 <div class="hidden md:flex lg:gap-4 gap-2 items-center">
@@ -47,9 +52,9 @@
                 <div class="flex flex-col gap-4 items-center">
                     <ul class="py-2 text-center mx-auto flex flex-col gap-4">
                         <li><a href="index.html" class="nav-all2">Beranda</a></li>
-                        <li><a href="#" class="nav-all1">Booking</a></li>
-                        <li><a href="#" class="nav-all1">Kontak</a></li>
-                        <li><a href="#" class="nav-all1">History</a></li>
+                        <li><a href="form.html" class="nav-all1">Booking</a></li>
+                        <li><a href="#kontak" class="nav-all1">Kontak</a></li>
+                        <li><a href="history.html" class="nav-all1">History</a></li>
                     </ul>
                     <div class="flex gap-2 items-center">
                         <a href="#"><button class="button1-nav">Masuk</button></a>
@@ -60,7 +65,7 @@
         </header>
 
 
-        <main class="3xl:mt-36 lg:mt-32 md:mt-28 mt-24 bg-custom1 padding">
+        <main class="3xl:mt-36 lg:mt-32 md:mt-28 mt-24 bg-custom1 padding flex-grow">
             <!-- section 1 -->
             <section class="flex 2xl:gap-[56px] xl:gap-[52px] lg:gap-[48px] md:gap-8 gap-0">
                 <img src="images/img section 1.png" alt="cuci motor" class="w-[40%] md:block hidden">
@@ -76,7 +81,7 @@
 
             <!-- section 2 -->
             <section class="margin-top">
-                <div class="flex flex-col gap-2 justify-center text-center md:items-center">
+                <div class="flex flex-col gap-2 md:justify-center md:text-center md:items-center">
                     <div class="div-nama-section">
                         <span class="span-garis-nama-section"></span>
                         <p class="nama-section">Kenapa Memilih Kami?</p>
@@ -202,7 +207,136 @@
 
             <!-- section 4 -->
             <section class="margin-top">
+                <div class="flex flex-col gap-2 md:justify-center md:text-center md:items-center">
+                    <div class="div-nama-section">
+                        <span class="span-garis-nama-section"></span>
+                        <p class="nama-section">Layanan Kami</p>
+                    </div>
+                    <p class="judul-section"><span class="text-custom2">Layanan</span> yang Kami <span class="text-custom2">Sediakan</span></p>
+                </div>
 
+                <div class="2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] md:mt-[20px] mt-4 grid md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid-rows-4 xl:gap-[29px] lg:gap-[24px] gap-4">
+                    <!-- card 1 -->
+                    <div class="div-card-paket">
+                        <div class="div-rounded-container"></div>
+                        <div class="div-text">
+                            <div class="div-nama-paket">
+                                <p class="nama-paket">Paket A</p>
+                                <p class="nomor-urut-paket">01</p>
+                            </div>
+                            <div class="lg:mt-[20px] mt-[18px]">
+                                <p class="text-benefit-paket">Kelebihan:</p>
+                                <div class="flex flex-col">
+                                    <div class="flex items-end gap-2 2xl:-mt-4 xl:-mt-2 lg:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Pencucian sekedar</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Hemat dan Terjangkau</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Proses Cepat dan Efisien</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-harga-paket">Rp 10.000</p>
+                            <a href="form.html"><button class="button-booking-paket">Booking</button></a>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="div-card-paket">
+                        <div class="div-rounded-container"></div>
+                        <div class="div-text">
+                            <div class="div-nama-paket">
+                                <p class="nama-paket">Paket B</p>
+                                <p class="nomor-urut-paket">02</p>
+                            </div>
+                            <div class="lg:mt-[20px] mt-[18px]">
+                                <p class="text-benefit-paket">Kelebihan:</p>
+                                <div class="flex flex-col">
+                                    <div class="flex items-end gap-2 2xl:-mt-4 xl:-mt-2 lg:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Pencucian lebih detail</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Perawatan tambahan</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Hasil lebih maksimal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-harga-paket">Rp 15.000</p>
+                            <a href="form.html"><button class="button-booking-paket">Booking</button></a>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="div-card-paket">
+                        <div class="div-rounded-container"></div>
+                        <div class="div-text">
+                            <div class="div-nama-paket">
+                                <p class="nama-paket">Paket C</p>
+                                <p class="nomor-urut-paket">03</p>
+                            </div>
+                            <div class="lg:mt-[20px] mt-[18px]">
+                                <p class="text-benefit-paket">Kelebihan:</p>
+                                <div class="flex flex-col">
+                                    <div class="flex items-end gap-2 2xl:-mt-4 xl:-mt-2 lg:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Pencucian lebih detail</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Ganti oli</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Pengecekan ban</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-harga-paket">Rp 65.000</p>
+                            <a href="form.html"><button class="button-booking-paket">Booking</button></a>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="div-card-paket">
+                        <div class="div-rounded-container"></div>
+                        <div class="div-text">
+                            <div class="div-nama-paket">
+                                <p class="nama-paket">Paket D</p>
+                                <p class="nomor-urut-paket">04</p>
+                            </div>
+                            <div class="lg:mt-[20px] mt-[18px]">
+                                <p class="text-benefit-paket">Kelebihan:</p>
+                                <div class="flex flex-col">
+                                    <div class="flex items-end gap-2 2xl:-mt-4 xl:-mt-2 lg:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Pencucian lebih detail</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Ganti oli</p>
+                                    </div>
+                                    <div class="flex items-end gap-2 2xl:-mt-6 xl:-mt-5 lg:-mt-3 md:-mt-1 mt-0">
+                                        <p class="text-titik-point-paket">.</p>
+                                        <p class="text-point-paket">Penggantian kampas rem</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-harga-paket">Rp 95.000</p>
+                            <a href="form.html"><button class="button-booking-paket">Booking</button></a>
+                        </div>
+                    </div>
+                    
+                </div>
             </section>
 
             <!-- section 5 -->
@@ -230,7 +364,7 @@
                     <p class="judul-section"><span class="text-custom2">Pertanyaan</span> Yang Sering <span class="text-custom2">Diajukan</span></p>
                 </div>
 
-                <div class="2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] md:mt-[20px] mt-4 grid md:grid-cols-2 md:grid-rows-3 grid-cols-1 grid-rows-6 2xl:gap-x-[51px] xl:gap-x-[47px] lg:gap-x-[43px] md:gap-x-8 lg:gap-y-[20px] gap-y-4">
+                <div class="2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] md:mt-[20px] mt-4 grid md:grid-cols-2 md:grid-rows-4 grid-cols-1 grid-rows-8 2xl:gap-x-[51px] xl:gap-x-[47px] lg:gap-x-[43px] md:gap-x-8 lg:gap-y-[20px] gap-y-4">
                         <!-- pertanyaan 1 -->
                         <div class="faq div-faq">
                             <div class="question div-question">
@@ -299,13 +433,39 @@
                         <!-- pertanyaan 6 -->
                         <div class="faq div-faq">
                             <div class="question div-question">
-                                <p class="teks-question">How should I prepare for my spa appointment?</p>
+                                <p class="teks-question">Bisa bayar tunai/transfer/QRIS?</p>
                                 <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
                                     <i class="ri-arrow-down-s-line icon-arrow"></i>
                                 </div>
                             </div>
                             <div class="answer mt-2">
-                                <p class="teks-answer">Spa treatments are generally safe, but some may not be suitable for children or pregnant women. We recommend consulting with our therapists to find the best treatments tailored to your needs.</p>
+                                <p class="teks-answer">Kami menerima pembayaran tunai, transfer dan QRIS sekaligus</p>
+                            </div>
+                        </div>
+
+                        <!-- pertanyaan 7 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">Bisakah orang dari luar sekolah mencuci disini?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Tentu saja bisa, kami menerima pesanan dari luar juga</p>
+                            </div>
+                        </div>
+
+                        <!-- pertanyaan 8 -->
+                        <div class="faq div-faq">
+                            <div class="question div-question">
+                                <p class="teks-question">Proses cuci motornya berapa lama?</p>
+                                <div class="w-[28px] h-[28px] bg-custom2 rounded-[4px] p-1 flex justify-center items-center text-center top-0 z-10 right-0 absolute">
+                                    <i class="ri-arrow-down-s-line icon-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="answer mt-2">
+                                <p class="teks-answer">Proses cuci motor sekitar 20 menit untuk 1 unit motor</p>
                             </div>
                         </div>
 
@@ -387,7 +547,99 @@
                     </div>
                 </div>
             </section>
+
+            <!-- section 8 -->
+            <section class="margin-top">
+                <div class="flex flex-col gap-2 md:justify-center md:text-center md:items-center">
+                    <div class="div-nama-section">
+                        <span class="span-garis-nama-section"></span>
+                        <p class="nama-section">Galeri Kami</p>
+                    </div>
+                    <p class="judul-section"><span class="text-custom2">Jelajahi</span> Fasilitas <span class="text-custom2">Kami</span> dalam <span class="text-custom2">Gambar</span></p>
+                </div>
+                <div class="2xl:mt-[35px] xl:mt-[30px] lg:mt-[25px] md:mt-[20px] md:block hidden">
+                    <div class="grid grid-cols-12 grid-rows-1 lg:gap-[15px] md:gap-2">
+                        <img src="images/img 1 galeri.png" alt="img 1" class="w-full col-span-4">
+                        <img src="images/img 2 galeri.png" alt="img 2" class="w-full col-span-4">
+                        <img src="images/img 3 galeri.png" alt="img 3" class="w-full col-span-4">
+                    </div>
+                    <div class="lg:mt-[15px] md:mt-2 grid grid-cols-12 grid-rows-1 lg:gap-[15px] md:gap-2">
+                        <img src="images/img 4 galeri.png" alt="img 4" class="col-span-3 w-full">
+                        <img src="images/img 5 galeri.png" alt="img 5" class="col-span-3 w-full">
+                        <img src="images/img 6 galeri.png" alt="img 6" class="col-span-3 w-full">
+                        <img src="images/img 7 galeri.png" alt="img 7" class="col-span-3 w-full">
+                    </div>
+                    <div class="lg:mt-[15px] md:mt-2 grid grid-cols-12 grid-rows-1 lg:gap-[15px] md:gap-2">
+                        <img src="images/img 8 galeri.png" alt="img 8" class="col-span-4 w-full">
+                        <img src="images/img 9 galeri.png" alt="img 9" class="col-span-4 w-full">
+                        <img src="images/img 10 galeri.png" alt="img 10" class="col-span-4 w-full">
+                    </div>
+                </div>
+
+                <div class="mt-4 md:hidden grid grid-cols-2 grid-rows-5 gap-2">
+                    <img src="images/img 1 galeri.png" alt="img 1" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 2 galeri.png" alt="img 2" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 3 galeri.png" alt="img 3" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 8 galeri.png" alt="img 8" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 9 galeri.png" alt="img 9" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 10 galeri.png" alt="img 10" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 4 galeri.png" alt="img 4" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 5 galeri.png" alt="img 5" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 6 galeri.png" alt="img 6" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                    <img src="images/img 7 galeri.png" alt="img 7" class="col-span-1 row-span-1 object-cover aspect-[1/1]">
+                </div>
+            </section>
         </main>
+
+        <footer class="style-untuk-footer" id="kontak">
+            <div class="div-paling-luar-navigation-footer">
+                <div class="flex flex-col gap-1">
+                    <img src="images/logo footer.png" alt="logo" class="w-[40%]">
+                    <p class="text-custom3 lg:text-sm text-[13px]">Layanan booking cuci motor online cepat, <br>praktis, dan terpercaya. Pilih jadwal anda, <br>dan motor Anda siap bersih tanpa antre.</p>
+                </div>
+                
+                <div class="div-navigation-footer">
+                    <p class="judul-navigation">Menu</p>
+                    <a href="#"><p class="text-navigation">Beranda</p></a>
+                    <a href="#"><p class="text-navigation">Tentang Kami</p></a>
+                    <a href="#"><p class="text-navigation">Cara Kerja</p></a>
+                    <a href="#"><p class="text-navigation">FAQ</p></a>
+                </div>
+
+                <div class="div-navigation-footer">
+                    <p class="judul-navigation">Layanan Kami</p>
+                    <a href="#"><p class="text-navigation">Paket A</p></a>
+                    <a href="#"><p class="text-navigation">Paket B</p></a>
+                    <a href="#"><p class="text-navigation">Paket C</p></a>
+                    <a href="#"><p class="text-navigation">Paket D</p></a>
+                </div>
+
+                <div class="div-navigation-footer">
+                    <p class="judul-navigation">Kontak</p>
+                    <a href="#" class="flex items-center gap-[10px] group">
+                        <iconify-icon icon="ic:baseline-phone" class="icon-navigation"></iconify-icon>
+                        <p class="text-navigation-icon">083-496-284-593</p>
+                    </a>
+                    <a href="#" class="flex items-center gap-[10px] group">
+                        <iconify-icon icon="lets-icons:message-fill" class="icon-navigation"></iconify-icon>
+                        <p class="text-navigation-icon">citorsa@gmail.com</p>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 mb-4 border-t border-custom3"></div>
+            <div class="justify-between flex md:flex-row flex-col gap-4 md:items-center">
+                <div class="flex lg:gap-[20px] gap-2 items-center">
+                    <a href="#"><iconify-icon icon="mdi:instagram" class="icon-social-media"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="mdi:whatsapp" class="icon-social-media"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="mdi:facebook" class="icon-social-media"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="mdi:twitter" class="icon-social-media"></iconify-icon></a>
+                </div>
+                <div class="flex items-center gap-1">
+                    <iconify-icon icon="mdi:copyright" class="text-custom3 text-xl"></iconify-icon>
+                    <p class="text-custom3 lg:text-sm text-xs">copyright2024citorsa</p>
+                </div>
+            </div>
+        </footer>
 
 
         <!-- script iconify -->
@@ -402,10 +654,5 @@
         <!-- faq js -->
         <script src="faq.js"></script>
 
-        <!-- script animasi slider card -->
-        <script src="customer.js" type="module"></script>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10.9.2/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
